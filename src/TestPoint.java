@@ -9,12 +9,12 @@ public class TestPoint implements KMeansInterface<Point> {
 	private int cnt = 0;
 
 	public static void main(String[] args) {
-		KMeans<Point> kmeans = new KMeans(PointFactory.getInitialData(), 10);
+		KMeans<Point> means = new KMeans<>(PointFactory.getInitialData(), 10);
 		TestPoint testPoint = new TestPoint();
 		while (true) {
 			try {
-				kmeans.nextSample(testPoint);
-				System.out.println(kmeans.getSamples());
+				means.nextSample(testPoint);
+				System.out.println(means.getSamples());
 			} catch (Exception e) {
 				break;
 			}
